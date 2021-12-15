@@ -15,7 +15,6 @@
   <img align="center" alt="Klarley-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
   <img align="center" alt="Klarley-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
   <img align="center" alt="Klarley-Python" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
-  <img align="right" alt="Klarley-gif" height="70" width="70" src="https://media3.giphy.com/media/MDs5sQsX9LjscxOl8y/giphy.gif?cid=ecf05e47bfo1543mf429me1yk7yvht25nd995fg6w4qgscer&rid=giphy.gif&ct=g">
 </div>
   
 ##
