@@ -1,26 +1,33 @@
-name: Generate Datas
+from math import*
+import numpy as np
+import time
+import random
+import sys
 
-on:
-  schedule: # execute every 12 hours
-    - cron: "* */12 * * *"
-  workflow_dispatch:
 
-jobs:
-  build:
-    name: Jobs to update datas
-    runs-on: ubuntu-latest
-    steps:
-      # Snake Animation
-      - uses: Platane/snk@master
-        id: snake-gif
-        with:
-          github_user_name: klarley
-          svg_out_path: dist/github-contribution-grid-snake.svg
+screenWidth = 150
+sineArg = 0
+period = 100
+xShift = 20
+snakePos = round(screenWidth/2)
+randAmplitude = 0.0
+while (True):
+	#snakePos += random.randrange(-1,2)
+	randAmplitude += random.uniform(-0.05, 0.05)
+	randAmplitude = min(abs(randAmplitude), 0.5)
+	sineOut = np.sin((2 * np.pi * sineArg)/period)
+	snakePos = sineOut*sineOut * screenWidth * randAmplitude + xShift
 
-      - uses: crazy-max/ghaction-github-pages@v2.1.3
-        with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
+	sineArg += 1
+	snakePos = min(max(snakePos, 0), screenWidth)
+	
+	#sys.stdout.flush()
+	#print(snakePos, randAmplitude)
+	for i in range(0, screenWidth + 1):
+		if (i != int(snakePos)):
+			sys.stdout.write(" ")
+		else:
+			sys.stdout.write("(OHO)")
+	time.sleep(0.08)
+	sys.stdout.write("\n")
+	sys.stdout.flush()
