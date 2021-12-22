@@ -21,8 +21,8 @@ while (True):
 	sineArg += 1
 	snakePos = min(max(snakePos, 0), screenWidth)
 	
-	#sys.stdout.flush()
-	#print(snakePos, randAmplitude)
+	sys.stdout.flush()
+	print(snakePos, randAmplitude)
 	for i in range(0, screenWidth + 1):
 		if (i != int(snakePos)):
 			sys.stdout.write(" ")
